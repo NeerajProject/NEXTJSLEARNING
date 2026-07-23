@@ -4,8 +4,8 @@ interface User {
 }
 
 const UsersPage = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
-
+  const res = await fetch("https://jsonplaceholder.typicode.com/users", {next:{revalidate: 60}}); // Revalidate every 60 seconds
+  
   if (!res.ok) {
     throw new Error("Failed to fetch users");
   }
@@ -15,7 +15,7 @@ const UsersPage = async () => {
   return (
     <div>
       <h1>Users</h1>
-
+<p>{new Date().toLocaleString()}</p>
       <ul>
         {users.map((user) => (
           <li key={user.id}>

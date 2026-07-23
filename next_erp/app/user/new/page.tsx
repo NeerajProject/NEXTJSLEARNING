@@ -1,17 +1,19 @@
-import { ProductCard } from '@/app/components/ProductCard'
-import Link from 'next/dist/client/link'
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
+import { ProductCard } from '@/app/components/ProductCard';
 
 const New = () => {
   return (
-    <div>New
+    <div>
+      <h1>New</h1>
+
       <ProductCard />
+
       <div>
         <Link href="/user">Users</Link>
       </div>
     </div>
+  );
+};
 
-  )
-}
-
-export default New
+export default New;
