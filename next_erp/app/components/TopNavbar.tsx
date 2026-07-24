@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid, Bell, Settings } from 'lucide-react';
-
 function ModuleLink({ label, active }: { label: string, active: boolean }) {
   return (
     <div className={`flex items-center h-full px-1 border-b-2 cursor-pointer transition-colors ${active ? 'border-[#cc1f1a] text-[#cc1f1a] font-semibold' : 'border-transparent text-gray-600 hover:text-[#cc1f1a]'}`}>
@@ -10,7 +9,7 @@ function ModuleLink({ label, active }: { label: string, active: boolean }) {
 }
 
 export default function TopNavbar() {
-  return (
+    return (
     <header className="h-16 border-b border-red-100 flex items-center justify-between px-6 flex-shrink-0 bg-white w-full">
       <nav className="flex space-x-6 h-full">
         <ModuleLink label="Inventory" active={false} />
