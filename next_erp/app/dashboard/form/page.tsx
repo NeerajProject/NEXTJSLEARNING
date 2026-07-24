@@ -1,13 +1,13 @@
 'use client';
 import React, { useState } from 'react';
 import { FileText, Truck, CalendarDays } from 'lucide-react';
-import { FormRenderer } from './FormRenderer';
-import { FormSection } from './FormSection';
-import { FormField } from '../FormField';
-import { Many2OneWidget } from './Many2OneWidget';
-import { DateWidget } from './DateWidget';
-import { SelectionWidget } from './SelectionWidget';
-import { One2ManyGrid } from './One2ManyGrid';
+import { FormRenderer } from "../../components/form/FormRenderer";
+import { FormSection } from "../../components/form/FormSection";
+import { FormField } from "../../components/form/FormField";
+import { Many2OneWidget } from "../../components/form/Many2OneWidget";
+import { DateWidget } from "../../components/form/DateWidget";
+import { SelectionWidget } from "../../components/form/SelectionWidget";
+import { One2ManyGrid } from "../../components/form/One2ManyGrid";
 
 export default function SalesOrderPage() {
   const statuses = ['Quotation', 'Quotation Sent', 'Sales Order', 'Done'];
