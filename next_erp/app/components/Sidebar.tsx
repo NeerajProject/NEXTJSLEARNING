@@ -51,7 +51,7 @@ const menus = [
   },
   {
     label: "Configuration",
-    href: "/logistics",
+    href: "/configuration",
     icon: Truck,
   },
 ];
