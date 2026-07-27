@@ -1,9 +1,26 @@
 import React from 'react';
-function ModuleLink({ label, active }: { label: string, active: boolean }) {
+import Link from "next/link";
+
+function ModuleLink({
+  label,
+  url,
+  active,
+}: {
+  label: string;
+  url: string;
+  active: boolean;
+}) {
   return (
-    <div className={`flex items-center h-full px-1 border-b-2 cursor-pointer transition-colors ${active ? 'border-[#cc1f1a] text-[#cc1f1a] font-semibold' : 'border-transparent text-gray-600 hover:text-[#cc1f1a]'}`}>
+    <Link
+      href={url}
+      className={`flex items-center h-full px-1 border-b-2 transition-colors ${
+        active
+          ? "border-[#cc1f1a] text-[#cc1f1a] font-semibold"
+          : "border-transparent text-gray-600 hover:text-[#cc1f1a]"
+      }`}
+    >
       {label}
-    </div>
+    </Link>
   );
 }
 
