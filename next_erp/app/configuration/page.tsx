@@ -7,16 +7,20 @@ import PageHeader from '../components/PageHeader';
 export const ChartofAccount = () => {
   return (
     <>
-            <TopNavbar/>
+            <TopNavbar menu={[{ label: "Chart of Accounts", url: "/configuration/chart-of-accounts" },
+
+{ label: "Journal", url: "/configuration/journal" }
+
+            ]} />
     
             {/* 3. CONTENT AREA & RIGHT PANEL */}
             <div className="flex flex-1 overflow-hidden">
               
               {/* Main Data Section */}
               <main className="flex-1 flex flex-col overflow-hidden bg-white">
-                <PageHeader />
+                <PageHeader  create={{ url: "/configuration/chart-of-accounts/new" }}/>
                
-                <StatusFooter />
+                <StatusFooter  />
               </main>
     
               {/* 4. RIGHT SIDEBAR (Search & Filters) */}
